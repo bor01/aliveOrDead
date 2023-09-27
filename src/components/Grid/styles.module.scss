@@ -1,0 +1,25 @@
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    flex-flow: column;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    align-content: center;
+}
+
+.cell {
+    width: 16px;
+    height: 16px;
+    box-shadow: inset 0 0 0 1px rgba($color: #000000, $alpha: .05);
+
+    &.dark {
+        background-color: black;
+    }
+}
+  
