@@ -1,6 +1,6 @@
 import { COLUMNS_SIZE, POSITIONS, ROWS_SIZE } from "../constants";
 
-export const initGrid = () => {
+export const initGame = () => {
     const grid = [];
     for (let i = 0; i < ROWS_SIZE; i++) {
         const row = [];
@@ -12,9 +12,13 @@ export const initGrid = () => {
     return grid;
 };
 
-export const runSimulation = (
-    grid: number[][]
+export const runGame = (
+    grid?: number[][]
 ) => {
+
+    if (grid === undefined) {
+        return initGame();
+    }
         return grid.map((row, i) => {
             return row.map((_, j) => {
                 let sum = 0;

@@ -1,10 +1,10 @@
 import React from 'react';
-import Grid from './components/Grid';
+import Game from './components/Game.tsx';
 import './App.css';
 
 const App = () => (
     <div className="App">
-        <Grid />
+        <Game />
     </div>
 );
 

@@ -1,17 +1,8 @@
-import React, { useState } from 'react';
-import { initGrid, runSimulation } from '../../utils/grid';
+import React from 'react';
 import classNames from 'classnames';
 import styles from './styles.module.scss';
-import { useInterval } from '../../hooks/useInterval';
-import { REFRESH_DELAY } from '../../constants';
 
-const Grid = () => {
-    const [grid, setGrid] = useState(initGrid());
-    useInterval(() => {
-        const newGrid = runSimulation(grid);
-        setGrid(newGrid);
-    }, REFRESH_DELAY);
-
+const Grid = ({ grid }: { grid: number[][] }) => {
     return (
         <div className={styles.grid}>
             {grid.map((row, i) => (
